@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 14:31:22 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 16:20:24 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/20 16:49:36 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+
+# include <sys/types.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -35,5 +37,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*memchr(const void *s, int c, size_t n);
+int	memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 
 #endif
