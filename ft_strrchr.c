@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:03:07 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/17 15:35:31 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:01:14 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == (char)c)
 			return ((char *)&s[i]);
+		i--;
 	}
 	return (NULL);
 }
 
-/*
+
 #include <stdio.h>
 int	main()
 {
@@ -40,4 +41,3 @@ int	main()
 		printf("Charnon trouve.\n");
 	return 0;
 }
-*/
