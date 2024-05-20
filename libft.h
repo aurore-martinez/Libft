@@ -6,14 +6,14 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 14:31:22 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 13:54:24 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:14:02 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
+# include <unistd.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -29,5 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
