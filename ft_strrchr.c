@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:03:07 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 14:01:14 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:08:57 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,13 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-
-#include <stdio.h>
+/* #include <stdio.h>
 int	main()
 {
 	char *result = ft_strrchr("Cocou cava", 117);
 	if (result)
 		printf("Dernier char trouve: %c\n", *result);
 	else
-		printf("Charnon trouve.\n");
+		printf("Char non trouve.\n");
 	return 0;
-}
+} */
