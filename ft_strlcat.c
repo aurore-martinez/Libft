@@ -6,21 +6,11 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:05:22 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 13:54:01 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:58:56 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -48,4 +38,4 @@ int main (int argc, char **argv)
         return (0);
     printf("%u\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
 }
-*/
+ */
