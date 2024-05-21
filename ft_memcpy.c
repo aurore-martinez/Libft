@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:00:21 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 13:53:32 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:15:04 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,26 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+/* #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char src[] = "Coucou ca va?";
+    char dst1[20];
+    char dst2[20];
+
+    ft_memcpy(dst1, src, strlen(src) + 1);
+    memcpy(dst2, src, strlen(src) + 1);
+    printf("ft_memcpy: %s\n", dst1);
+    printf("memcpy:    %s\n", dst2);
+
+    ft_memcpy(dst1, src, 5);
+    memcpy(dst2, src, 5);
+    dst1[5] = '\0';
+    dst2[5] = '\0';
+    printf("ft_memcpy (partial): %s\n", dst1);
+    printf("memcpy (partial):    %s\n", dst2);
+
+    return 0;
+} */
