@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 14:31:22 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 18:13:19 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/21 11:35:48 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 # include <sys/types.h>
 
+/* Functions libc */
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
@@ -42,5 +43,9 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 int	ft_atoi(const char *nptr);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(char *src);
+
+/* Functions additional */
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 
 #endif
