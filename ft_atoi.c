@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:02:27 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/20 15:41:02 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/21 11:10:07 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int main(int argc, char **argv)
 		write(1, "ERR\n", 4);
 		return (0);
 	}
-    printf("%d\n", ft_atoi(argv[1]));
+	printf("%d\n", ft_atoi(argv[1]));
+	printf("%d\n", atoi(argv[1]));
 	return 0;
-} */
+}
+ */
