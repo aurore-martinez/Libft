@@ -6,7 +6,13 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:56:08 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/21 13:56:09 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:29:59 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char* itoa (int val, char * s, int radix)
+{
+	
+}

@@ -6,25 +6,25 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 11:56:20 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/21 10:02:25 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/22 14:13:58 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 
-	if (!b)
+	if (!s)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
-		*(unsigned char *)(b + i) = (unsigned char) c;
+		*(unsigned char *)(s + i) = (unsigned char) c;
 		i++;
 	}
-	return (b);
+	return (s);
 }
 
 /* #include <stdio.h>
