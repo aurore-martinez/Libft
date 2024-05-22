@@ -6,57 +6,11 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:55:31 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/22 13:58:07 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/22 14:06:13 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == (char) c)
-			break ;
-		i++;
-	}
-	if (s[i] == (char) c)
-		return ((char *) s + i);
-	return (NULL);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t	i;
-
-	i = 0;
-	if (!dst || !src)
-		return (0);
-	while (src[i] && i < (dstsize - 1))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (dstsize > 0)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (ft_strlen(src));
-}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
