@@ -6,13 +6,60 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:56:08 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/22 15:29:59 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:23:00 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char* itoa (int val, char * s, int radix)
+size_t	count_size(long nb)
 {
-	
+	size_t	size;
+
+	size = 0;
+	if (nb < 0)
+	{
+	nb = nb * (-1);
+		size = 1;
+	}
+	if (nb == 0)
+		size = 1;
+	else
+	{
+		while (nb)
+		{
+			nb = nb / 10;
+			size++;
+		}
+	}
+	return (size);
+}
+
+char	*ft_itoa(int n)
+{
+	size_t	size;
+	long	nb;
+	char	*str;
+	int		is_negative;
+
+	size = count_size((long) n);
+	str = (char *) malloc(sizeof(char) * (size + 1));
+	if (str == NULL)
+		return (NULL);
+	nb = (long) n;
+	is_negative = 0;
+	if (nb < 0)
+	{
+		nb = nb * (-1);
+		str[0] = '-';
+		is_negative = 1;
+	}
+	str[size] = '\0';
+	while (size > (size_t) is_negative)
+	{
+		str[size - 1] = nb % 10 + '0';
+		nb = nb / 10;
+		size--;
+	}
+	return (str);
 }
