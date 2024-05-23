@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 14:31:22 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/23 14:26:30 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/23 16:03:14 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-
+# include <stdint.h>
 # include <sys/types.h>
 
 /* Functions libc */

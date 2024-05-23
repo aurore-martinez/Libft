@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:31:02 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/21 11:22:30 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/23 16:03:00 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	total_size;
 	void	*ptr;
 
+	if (count && size && count > SIZE_MAX / size)
+		return (NULL);
 	total_size = count * size;
 	ptr = malloc(total_size);
 	if (ptr == NULL)
