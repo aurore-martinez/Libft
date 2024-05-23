@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 12:05:22 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/23 12:00:39 by aumartin         ###   ########.fr       */
+/*   Created: 2024/05/23 11:28:18 by aumartin          #+#    #+#             */
+/*   Updated: 2024/05/23 11:55:47 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len_dest;
 	size_t	i;
+	char	*new;
 
-	len_dest = ft_strlen(dest);
+	new = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!new)
+		return (NULL);
 	i = 0;
-	while (src[i] != '\0' && i < size)
+	while (s[i])
 	{
-		dest[len_dest + i] = src[i];
+		new[i] = (*f)(i, s[i]);
 		i++;
 	}
-	dest[len_dest + i] = '\0';
-	return (len_dest + ft_strlen(src));
+	new[i] = '\0';
+	return (new);
 }
 
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int main (int argc, char **argv)
+/* char add_index(unsigned int i, char c)
 {
-    if (argc != 4)
-        return (0);
-    printf("%u\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
+	return (c + i);
 }
- */
+
+#include <stdio.h>
+int	main()
+{
+	char *strmapi_result = ft_strmapi("abcde", &add_index);
+	printf("ft_strmapi: %s\n", strmapi_result);
+	free(strmapi_result);
+	return (0);
+} */
