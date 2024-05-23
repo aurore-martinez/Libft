@@ -6,25 +6,11 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:55:51 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/23 09:55:06 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:11:53 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* void free_split(char **str, int index)
-{
-	int	i;
-
-	i = 0;
-	while (i < index)
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
-}
-*/
 
 int	count_strs(char *str, char c)
 {
@@ -57,6 +43,19 @@ char	*get_word(char *str, char c)
 	return (word);
 }
 
+void	free_split(char **str, int index)
+{
+	int	i;
+
+	i = 0;
+	while (i < index)
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+}
+
 char	**ft_split(char *str, char c)
 {
 	int		count;
@@ -74,12 +73,7 @@ char	**ft_split(char *str, char c)
 		{
 		strings[index] = get_word(str, c);
 			if (!strings[index])
-			{
-				while (index--)
-					free(strings[index]);
-				free(strings);
-				return (NULL);
-			}
+				return (free_split(strings, index), NULL);
 			index++;
 			while (*str && *str != c)
 				str++;
