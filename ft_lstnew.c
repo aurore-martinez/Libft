@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 11:56:20 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/24 15:20:41 by aumartin         ###   ########.fr       */
+/*   Created: 2024/05/24 14:03:06 by aumartin          #+#    #+#             */
+/*   Updated: 2024/05/24 15:06:20 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-	/* if(!s)
-			return (NULL);
-	*/
-
-void	*ft_memset(void *s, int c, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*new;
 
-	i = 0;
-	while (i < n)
-	{
-		*(unsigned char *)(s + i) = (unsigned char) c;
-		i++;
-	}
-	return (s);
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
 
-/* #include <stdio.h>
-#include <string.h>
-int main()
-{
-    char str[10];
-    printf("str avant ft_memset: %s\n", str);
-    ft_memset(str, 'A', 5);
-    // memset(str, 'A', 5);
-    printf("str après ft_memset: %s\n", str);
-    return 0;
-} */
+/* (*new).content = content; */
