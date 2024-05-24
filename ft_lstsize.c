@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 15:00:42 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/24 15:01:08 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/24 15:30:45 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
+	int	size;
 
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }
+
+/* lst = (*lst).next; */
