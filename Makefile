@@ -7,9 +7,9 @@ LIBC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 ADDITIONAL = ft_itoa.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
     ft_split.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_substr.c ft_striteri.c
 
-BONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
-  ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
-  ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
+BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
+  ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c \
+  ft_lstnew.c ft_lstsize.c
 
 SRCS = ${LIBC} ${ADDITIONAL}
 
@@ -19,7 +19,7 @@ OBJS = ${SRCS:.c=.o}
 
 OBJSALL = ${SRCSALL:.c=.o}
 
-LIB = libft.a
+NAME = libft.a
 
 CC = gcc
 
@@ -28,19 +28,19 @@ CFLAGS = -Wall -Werror -Wextra -I ./
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${LIB}: ${OBJS}
-	ar -rsc ${LIB} ${OBJS}
+${NAME}: ${OBJS}
+	ar -rsc ${NAME} ${OBJS}
 
 bonus: ${OBJSALL}
-	ar -rsc ${LIB} ${OBJSALL}
+	ar -rsc ${NAME} ${OBJSALL}
 
-all:  ${LIB}
+all:  ${NAME}
 
 clean:
 	rm -f ${OBJSALL}
 
 fclean: clean
-	rm -f ${LIB}
+	rm -f ${NAME}
 
 re: fclean all
 
