@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 12:00:21 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/21 10:15:04 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/27 12:52:26 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:02:40 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/21 13:43:16 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/27 13:08:58 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	size_t	len_n;
+	size_t	len_s2;
 	size_t	i;
 	size_t	j;
 
-	if (!s1 || !s2)
+	len_s2 = ft_strlen(s2);
+	if (!s1 || !s2 || len < len_s2)
 		return (NULL);
-	if (ft_strlen(s2) == 0)
+	if (*s2 == '\0')
 		return ((char *) s1);
-	len_n = ft_strlen(s2);
 	i = 0;
 	while (s1[i] && i < len)
 	{
 		j = 0;
 		while (s1[i + j] && s1[i + j] == s2[j] && i + j < len)
 			j++;
-		if (j == len_n)
+		if (j == len_s2)
 			return ((char *) s1 + i);
 		i++;
 	}
