@@ -6,13 +6,13 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:56:08 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/23 11:23:00 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:05:50 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_size(long nb)
+static size_t	count_size(long nb)
 {
 	size_t	size;
 

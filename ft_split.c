@@ -6,13 +6,13 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:55:51 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/23 10:11:53 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:06:57 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_strs(char *str, char c)
+static int	count_strs(char *str, char c)
 {
 	int	count;
 	int	i;
@@ -54,6 +54,7 @@ void	free_split(char **str, int index)
 		i++;
 	}
 	free(str);
+	*str = NULL;
 }
 
 char	**ft_split(char *str, char c)

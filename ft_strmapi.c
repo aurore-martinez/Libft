@@ -6,7 +6,7 @@
 /*   By: aumartin <aumartin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:28:18 by aumartin          #+#    #+#             */
-/*   Updated: 2024/05/23 11:55:47 by aumartin         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:07:34 by aumartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*new;
 
+	if (!f)
+		return (NULL);
 	new = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!new)
 		return (NULL);
